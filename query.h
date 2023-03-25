@@ -5,11 +5,11 @@ typedef enum {
     OPEN,
     CREATE,
     CLOSE,
-} request_type;
+} query_type;
 
 typedef struct {
-    request_type type;
+    query_type type;
     char* schema_name;
-} request_tree;
+} query_tree;
 
-request_tree get_request_tree();
+query_tree get_query_tree();
