@@ -12,5 +12,5 @@ int main(){
     int x = yyparse();
     query_tree tree = get_query_tree();
     transfer_creator_t * tc = init_transfer_format();
-
+    prepare_data_to_transfer(&tree, tc);
 }
