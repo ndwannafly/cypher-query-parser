@@ -19,12 +19,51 @@ extern char *yytext;
 
 %}
 
+%token OBRACE CBRACE QUOTE DOT COMMA SEMICOLON
+
+
 %start commands
 
 %%
 
-commands:
 
+commands: /* empty */
+	| commands command SEMICOLON {
+	YYACCEPT;
+	}
+	;
+
+
+command:
+	open_file
+	|
+	create_file
+	|
+	close_file
+	|
+	add_schema
+	|
+	delete_schema
+	|
+	add_vertex
+	|
+	select_command
+	;
+
+
+select_command:
+
+open_file:
+
+create_file:
+
+close_file:
+
+add_schema:
+
+delete_schema:
+
+add_vertex:
 
 %%
 
