@@ -4,7 +4,7 @@
 
 #include "query.h"
 
-#define TRANSFER "transfer_data.json"
+#define TRANSFER "data.json"
 
 typedef struct transfer_creator transfer_creator_t;
 
